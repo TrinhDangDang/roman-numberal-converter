@@ -20,9 +20,9 @@ const convertToRoman = numberToConvert => {
     ];
     const romanNumber = [];
     reference.forEach(function(eachArrayInsideReferenceArray) {
-        while (numberToConvert > eachArrayInsideReferenceArray[1]){
+        while (numberToConvert >= eachArrayInsideReferenceArray[1]){
             romanNumber.push(eachArrayInsideReferenceArray[0]); //push method add new item to the end of the array
-            numberToConvert -= eachArrayInsideReferenceArray[0]; 
+            numberToConvert -= eachArrayInsideReferenceArray[1]; 
         }
     });
     return romanNumber.join('');

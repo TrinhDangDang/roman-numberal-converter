@@ -53,6 +53,7 @@ form {
     border: 3px solid var(--gray-05);
     text-align: center;
     max-width: 500px;
+    width: 90%;
 }
 
 fieldset {
@@ -118,6 +119,7 @@ button {
     );
     border: 3px solid var(--danger-color);
     color: var(--danger-color);
+    width: 100%;
 }
 
 .hidden {

@@ -13,19 +13,20 @@ const convertToRoman = numberToConvert => {
         ['XC', 90],
         ['L', 50],
         ['XL', 40],
+        ['X', 10],
         ['IX', 9],
         ['V', 5],
         ['IV', 4],
         ['I', 1]
     ];
     const romanNumber = [];
-    reference.forEach(function(eachArrayInsideReferenceArray) {
-        while (numberToConvert >= eachArrayInsideReferenceArray[1]){
-            romanNumber.push(eachArrayInsideReferenceArray[0]); //push method add new item to the end of the array
-            numberToConvert -= eachArrayInsideReferenceArray[1]; 
+    reference.forEach(([roman, value]) => {
+        while (numberToConvert >= value) {
+            romanNumber.push(roman); // Add the Roman numeral to the array
+            numberToConvert -= value; // Subtract the value from the number
         }
     });
-    return romanNumber.join('');
+    return romanNumber.join(''); // Join the array into a string
 };
 
 
